@@ -1,6 +1,6 @@
 create table abc (
-                     a int primary key,
-                     b char(10)
+    a int primary key,
+    b char(10)
 );
 describe abc; 				-- abc 테이블의 내용 보기
 
@@ -29,10 +29,10 @@ describe abc;					-- abc 테이블의 내용 보기
 -- 		// 추가 : 총점, 평균, 학점		  ( 모두 숫자로 생성 )
 
 create table sungjuk (  -- // 기본 : 이름, 국어, 영어, 수학
-                         name char(6),
-                         kor	varchar(10),
-                         eng	varchar(10),
-                         mat varchar(10)
+    name char(6),
+    kor	varchar(10),
+    eng	varchar(10),
+    mat varchar(10)
 );
 describe sungjuk;
 

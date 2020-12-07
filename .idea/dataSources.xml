@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="playground4_2" uuid="677bef92-c384-489e-ab50-0e0e129de608">
+    <data-source source="LOCAL" name="playground B" uuid="677bef92-c384-489e-ab50-0e0e129de608">
       <driver-ref>mariadb</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>org.mariadb.jdbc.Driver</jdbc-driver>
       <jdbc-url>jdbc:mariadb://maria-db.coqecfviusin.ap-northeast-2.rds.amazonaws.com:3306/playground4_2</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
-    <data-source source="LOCAL" name="playground5" uuid="90c127db-64ab-4253-87a5-c21b29e34f25">
+    <data-source source="LOCAL" name="playground A" uuid="90c127db-64ab-4253-87a5-c21b29e34f25">
       <driver-ref>mariadb</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>org.mariadb.jdbc.Driver</jdbc-driver>
       <jdbc-url>jdbc:mariadb://maria-db.coqecfviusin.ap-northeast-2.rds.amazonaws.com:3306/playground5</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
-    <data-source source="LOCAL" name="playground6" uuid="c1abde3f-aa31-4785-8020-1e732dea7842">
+    <data-source source="LOCAL" name="playground C" uuid="c1abde3f-aa31-4785-8020-1e732dea7842">
       <driver-ref>mariadb</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>org.mariadb.jdbc.Driver</jdbc-driver>

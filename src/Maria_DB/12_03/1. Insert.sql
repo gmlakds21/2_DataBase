@@ -2,12 +2,12 @@
 -- 데이터 삽입문 : insert
 
 create table members (
-                         user_id varchar(10),
-                         user_pw varchar(10),
-                         name	varchar(10),
-                         grade	varchar(10) default 'bronze',
-                         points	int			default 1000,
-                         in_date datetime
+    user_id varchar(10),
+    user_pw varchar(10),
+    name	varchar(10),
+    grade	varchar(10) default 'bronze',
+    points	int			default 1000,
+    in_date datetime
 );
 
 

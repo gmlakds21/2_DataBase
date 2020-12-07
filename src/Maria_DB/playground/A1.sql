@@ -51,4 +51,6 @@ select bookname as '도서 이름' from Books where bookname like '%골프%' and
 
 -- 11) 고객이름을 가나다순으로 오름차순 정렬하고
 -- 이름이 같으면 주소로 내림차순 정렬해서 조회하세요
-select name from users order by name, address desc;
+select name, address from users u
+    inner join order_table ot on u.user_id = ot.user_id
+    order by name, address desc;

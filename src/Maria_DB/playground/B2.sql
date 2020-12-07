@@ -21,11 +21,10 @@ select manager_id, min(salary) from employees
 where manager_id is not null
 group by manager_id having min(salary) >= 6000 order by min(salary) desc;
 
--- 29. 부서 명, 위치 ID, 각 부서 별 사원 총 수, 각 부서 별 평균 연봉을 조회한다.
---     평균 연봉은 소수점 2 자리까지만 표현한다.
-
-
-
+-- 29. 부서 명, 위치 ID, 각 부서 별 사원 총 수, 각 부서 별 평균 연봉을 조회한다. 평균 연봉은 소수점 2 자리까지만 표현한다.
+select department_name, count(employee_id), round(avg(salary),2) from employees e
+    inner join departments d on e.department_id = d.department_id
+group by department_name;
 
 -- 30. 총 사원 수 및 1995, 1996, 1997, 1998 년도 별 고용된 사원들의 총 수를 다음과 같이 조회한다.
 select hire_date, count(employee_id) from employees

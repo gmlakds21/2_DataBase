@@ -1075,29 +1075,29 @@ SELECT,INSERT,UPDATE,DELETE,CREATE,DROP,INDEX,ALTER,CREATE TEMPORARY TABLES,LOCK
 SELECT,INSERT,UPDATE,DELETE,CREATE,DROP,REFERENCES,INDEX,ALTER,CREATE TEMPORARY TABLES,LOCK TABLES,EXECUTE,CREATE VIEW,SHOW VIEW,CREATE ROUTINE,ALTER ROUTINE,TRIGGER|bigdata!
 </ObjectGrants>
     </user>
-    <user id="342" parent="1" name="playground2">
+    <user id="342" parent="1" name="playground A">
+      <Host>%</Host>
+      <ObjectGrants>SELECT,INSERT,UPDATE,DELETE,CREATE,DROP,REFERENCES,INDEX,ALTER,CREATE TEMPORARY TABLES,LOCK TABLES,EXECUTE,CREATE VIEW,SHOW VIEW,CREATE ROUTINE,ALTER ROUTINE,TRIGGER|playground5!
+</ObjectGrants>
+    </user>
+    <user id="343" parent="1" name="playground2">
       <Host>%</Host>
       <ObjectGrants>SELECT,INSERT,UPDATE,DELETE,CREATE,DROP,REFERENCES,INDEX,ALTER,CREATE TEMPORARY TABLES,LOCK TABLES,EXECUTE,CREATE VIEW,SHOW VIEW,CREATE ROUTINE,ALTER ROUTINE,TRIGGER|playground2
 </ObjectGrants>
     </user>
-    <user id="343" parent="1" name="playground3">
+    <user id="344" parent="1" name="playground3">
       <Host>%</Host>
       <ObjectGrants>SELECT,INSERT,UPDATE,DELETE,CREATE,DROP,REFERENCES,INDEX,ALTER,CREATE TEMPORARY TABLES,LOCK TABLES,EXECUTE,CREATE VIEW,SHOW VIEW,CREATE ROUTINE,ALTER ROUTINE,TRIGGER|playground3!
 </ObjectGrants>
     </user>
-    <user id="344" parent="1" name="playground4">
+    <user id="345" parent="1" name="playground4">
       <Host>%</Host>
       <ObjectGrants>SELECT,INSERT,UPDATE,DELETE,CREATE,DROP,REFERENCES,INDEX,ALTER,CREATE TEMPORARY TABLES,LOCK TABLES,EXECUTE,CREATE VIEW,SHOW VIEW,CREATE ROUTINE,ALTER ROUTINE,TRIGGER|playground4!
 </ObjectGrants>
     </user>
-    <user id="345" parent="1" name="playground4_2">
+    <user id="346" parent="1" name="playground4_2">
       <Host>%</Host>
       <ObjectGrants>SELECT,INSERT,UPDATE,DELETE,CREATE,DROP,REFERENCES,INDEX,ALTER,CREATE TEMPORARY TABLES,LOCK TABLES,EXECUTE,CREATE VIEW,SHOW VIEW,CREATE ROUTINE,ALTER ROUTINE,TRIGGER|playground4_2!
-</ObjectGrants>
-    </user>
-    <user id="346" parent="1" name="playground5">
-      <Host>%</Host>
-      <ObjectGrants>SELECT,INSERT,UPDATE,DELETE,CREATE,DROP,REFERENCES,INDEX,ALTER,CREATE TEMPORARY TABLES,LOCK TABLES,EXECUTE,CREATE VIEW,SHOW VIEW,CREATE ROUTINE,ALTER ROUTINE,TRIGGER|playground5!
 </ObjectGrants>
     </user>
     <user id="347" parent="1" name="playground6">

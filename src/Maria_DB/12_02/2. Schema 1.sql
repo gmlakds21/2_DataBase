@@ -1,24 +1,23 @@
 -- 제약 조건 추가하기
 create table employees (
-                           employee_id 	int,
-                           first_name  	varchar(25),
-                           last_name 		varchar(25),
-                           department_id	int
+    employee_id 	int,
+    first_name  	varchar(25),
+    last_name 		varchar(25),
+    department_id	int
 );
 describe employees;
 
 create table departments (
-                             department_id 	int,
-                             department_name	varchar(30),
-                             manager_id		int
+    department_id 	int,
+    department_name	varchar(30),
+    manager_id		int
 );
 describe departments;
 
 -- 복잡한 관계들로 구선된 테이블들을 생성시 번거로움 발생
 
 -- 데이터 베이스에 생선된 제약조건 확인
-select * from
-    information_schema.table_constraints;
+select * from information_schema.table_constraints;
 
 
 
@@ -33,7 +32,7 @@ alter table 테이블명
 -- pk_emp는 검색할때 사용한다.
 alter table employees
     add constraint pk_emp
-        primary key (employee_id);
+      primary key (employee_id);
 
 
 -- 검색어가 필요 없다면 이렇게 해도 된다.

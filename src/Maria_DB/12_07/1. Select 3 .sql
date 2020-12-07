@@ -21,4 +21,18 @@ select * from tableA as 'A', tableB as 'B' where A.name = B.name;
 select * from tableA inner join tableB on tableA.name = tableB.name;
 select * from tableA inner join tableB using (name);
 
+-- outer join
+-- 각 테이블에서 공통으로 포함된, 자료를 조회하는 것이 아닌
+-- 교집합을 갖지 않는 데이터를 조회할때
 
+-- 왼쪽( 또는 오른쪽 ) 및 교집합
+-- left( right ) join, on A.key = B.key
+
+-- 왼쪽( 또는 오른쪽 ) 만
+-- left( right ) join, on A.key = B.key, where B.key is null
+
+-- 왼쪽 오른쪽 전체
+-- full outer join, on A.key = B.key
+
+-- 왼쪽 오른쪽 전체 - 교집합
+-- full outer join, on A.key = B.key where A.key is null or B.key is null
