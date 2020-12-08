@@ -1,6 +1,6 @@
-create database playground5;
+create database playground7;
 
-create user 'playground5'@'%'
+create user 'playground7'@'%'
     identified by 'playground2020';
 
 GRANT SELECT, INSERT, UPDATE,
@@ -8,7 +8,7 @@ GRANT SELECT, INSERT, UPDATE,
     ALTER, CREATE TEMPORARY TABLES,
     LOCK TABLES, EXECUTE, CREATE VIEW, SHOW VIEW,
     CREATE ROUTINE, ALTER ROUTINE, TRIGGER
-    ON playground5.* TO 'playground5'@'%'
+    ON playground7.* TO 'playground7'@'%'
     WITH GRANT OPTION;
 
 flush privileges;
