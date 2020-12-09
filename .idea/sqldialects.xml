@@ -12,8 +12,8 @@
     <file url="file://$PROJECT_DIR$/src/Maria_DB/12_04/1. Select 2.sql" dialect="GenericSQL" />
     <file url="file://$PROJECT_DIR$/src/Maria_DB/12_07/1. Select 3 .sql" dialect="GenericSQL" />
     <file url="file://$PROJECT_DIR$/src/create/New.sql" dialect="GenericSQL" />
-    <file url="file://$PROJECT_DIR$/src/playground/B1.sql" dialect="GenericSQL" />
-    <file url="file://$PROJECT_DIR$/src/playground/C1.sql" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/src/playground/B.sql" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/src/playground/C.sql" dialect="GenericSQL" />
     <file url="file://$PROJECT_DIR$/src/playground/playground A.sql" dialect="GenericSQL" />
     <file url="file://$PROJECT_DIR$/src/playground/playground B.sql" dialect="GenericSQL" />
   </component>
