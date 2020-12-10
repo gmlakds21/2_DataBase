@@ -60,7 +60,7 @@ select price, publisher from Books order by price desc, publisher;
 -- 12) 고객이 주문한 도서의 총, 평균, 최고, 최저 판매액을 조회하세요
 select sum(saleprice), round(avg(saleprice)), max(saleprice), min(saleprice) from BookOrders;
 
--- -13b) 출판사별 도서의 총 수량 조회하세요
+-- 13b) 출판사별 도서의 총 수량 조회하세요
 select publisher, count(bookid) from Books group by publisher;
 
 -- 14) 출판사별 도서의 총 수량이 2권이상인 출판사 조회하세요
@@ -71,7 +71,7 @@ select custid, count(bookid) from BookOrders group by custid
 having max(saleprice) >= 12000;
 
 -- 14b) 가격이 8000이상인 도서를 구매한 고객별 주문 도서의 총 수량을 구하세요
--- 단, 고객별 2권이상 주문한 고객을 대상으로 한다
+--      단, 고객별 2권이상 주문한 고객을 대상으로 한다
 select custid, count(bookid) from BookOrders group by custid
 having max(saleprice) >= 8000 and count(bookid) >= 2;
 
@@ -113,11 +113,6 @@ select pro_name from product
     inner join order_table on product.pro_no = order_table.pro_no
     inner join users on order_table.user_id = users.user_id
     where name = '고명석';
-
-
-
-
-
 
 -- 26) 달콤 비스킷
 select pro_name, price from product
@@ -166,6 +161,36 @@ select * from 우수고객 where age >= 25;
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
 -- //
 select concat(name,'고객의 주소는 ',address,'이고 전화번호는 ',phone,'입니다.') '고객 정보' from BookMembers
 
+select bookname, replace(bookname, '야구','야아구') from Books;
+
+update Books set bookname = replace(bookname, '야아구', '야구') where bookname like '%야구%';
+
+select bookname from Books;
+
+select bookname, char_length(bookname) from Books where publisher = '굿스포츠';
+
+select bookname, char_length(replace(bookname,' ','')) from Books where publisher = '굿스포츠';
+
+select left(name,1), count(name) from BookMembers group by left(name,1);
+
+
+
+select lag(pro_name) over(order by pro_no), pro_name, lead(pro_name) over(order by pro_no) from product order by pro_no;
+
+select user_id '나', order_time '나의 이용 날짜', lag(user_id) over(order by order_time) '전 사람', lag(order_time) over(order by order_time) '전사람의 이용 날짜'
+    from order_table order by order_time;

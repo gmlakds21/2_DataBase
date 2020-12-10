@@ -1,12 +1,10 @@
--- classicmodels 데이터베이스 SQL 예제
-
--- 1. 직원employees의 모든 정보를 조회하세요
+-- 1. 직원 employees 의 모든 정보를 조회하세요
 select * from employees;
 
--- 1.2 고객customers의 모든 정보를 조회하세요
+-- 1.2 고객 customers 의 모든 정보를 조회하세요
 select * from customers;
 
--- 1.3 상품products의 모든 정보를 조회하세요
+-- 1.3 상품 products 의 모든 정보를 조회하세요
 select * from products;
 
 -- 2. 직원의 성과 이름, 직책을 조회하세요
@@ -15,10 +13,10 @@ select lastname, firstname, jobTitle from employees;
 -- 3. 직원의 성을 조회하세요. 단, 중복 제외
 select distinct lastname from employees;
 
--- 4. 고객 테이블에서 null이 아닌 주와 도시를 조회하세요. 단, 중복 제외
+-- 4. 고객 테이블에서 null 이 아닌 주와 도시를 조회하세요. 단, 중복 제외
 select distinct city, state from customers where city is not null and state is not null;
 
--- 5. 고객 테이블에서 USA의 주가  몇 개인지 조회하세요
+-- 5. 고객 테이블에서 USA 의 주가  몇 개인지 조회하세요
 select count(customerNumber) from customers where country = 'USA';
 
 -- 국적이 호주인 고객은 모두 몇명인가?
@@ -30,7 +28,7 @@ select customername from customers order by creditlimit ;
 -- 고객 중 현금한도가 높은 순으로 6번째 ~ 10번째 고객을 조회하세요
 select customername from customers order by creditlimit ;
 
--- 7. 직책이 Sales Rep이고  오피스코드가 1인 직원을 조회하세요
+-- 7. 직책이 Sales Rep 이고  오피스코드가 1인 직원을 조회하세요
 select lastname from employees where jobtitle = 'sales rep' and officecode = 1;
 
 -- 8. 직책이 Sales Rep이 아니고, 오피스코드가 5이상인 직원을 조회하세요
@@ -39,7 +37,7 @@ select lastname from employees where jobtitle <> 'sales rep' and officecode >= 5
 -- 9. 고객의 성과 이름을 알파벳 순으로 조회하세요
 select lastname, firstname from employees order by lastname, firstname;
 
--- 10. 주문상세orderdetails에서 주문번호, 주문수량, 개별가격, 주문수량*개별가격으로 조회하세요
+-- 10. 주문상세 order details 에서 주문번호, 주문수량, 개별가격, 주문수량*개별가격으로 조회하세요
 select ordernumber, quantityordered, priceeach, quantityordered * priceeach
 from orderdetails;
 
@@ -81,7 +79,7 @@ select lastname, firstname from employees where firstname like 'j___e';
 -- 19. 고객 테이블에서 담당직원번호가 없는 고객의 이름과, 국가, 담당직원번호를 조회하세요
 select customername, country, salesrepemployeenumber from customers where salesRepEmployeeNumber is null;
 
--- 20. 고객customer 이름별 주문orders 건수를 조회하세요
+-- 20. 고객 customer 이름별 주문 orders 건수를 조회하세요
 select customernumber, count(ordernumber) from orders group by customernumber;
 
 -- 21. 상품코드, 상품이름, 상품설명을 조회하세요
