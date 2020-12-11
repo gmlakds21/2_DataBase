@@ -7,9 +7,11 @@
 -- null 처리
 -- coalesce(문자열, 널일때 대체값)
 select NUll, coalesce(null, '널임'), coalesce('Hello', '널임');
+select coalesce(null, 'abc', 'xyz'), coalesce(null, null, 'xyz'); -- -> null일경우 다음칸, 또 null일경우 다음칸
 
 -- ifnull(문자열, 널일때 대체값)
 select NUll, ifnull(null, '널임'), ifnull('Hello', '널임');
+
 
 -- 두값이 일치하면 null, 다르면 문자열1
 -- nullif(문자열1, 문자열2)
@@ -28,18 +30,25 @@ select case when 5>3 then '크다' else '작다' end, case when 2>3 then '크다
 
 
 -- 날짜 / 시간 함수 : year, month, week, day, hour, minute, second
+select now(), time(now());  -- 현재 시간
+select @@session.time_zone; -- 현재 타임존이 어디로 바뀌었는지
+-- 한국으로 기본시간을 설정하는 법
+set global time_zone = 'Asia/Seoul';    -- 관리자 단위에서 변경
+set time_zone = 'Asia/Seoul';   -- 세션만 변경
+-- 다시 세계 시간 기준으로 바꾸는 법
+set global time_zone = 'UTC';
+set time_zone = 'UTC';
 
 
-
--- YYYY-MM-DD HH:MM:SS : 현재 날짜 / 시간 - 미국 기준
+-- YYYY-MM-DD HH:MM:SS : 현재 날짜 / 시간
 -- now(), current_timestamp, sysdate()
 select now(), current_timestamp, sysdate();
 
--- YYYY-MM-DD : 현재 날짜 - 미국 기준
+-- YYYY-MM-DD : 현재 날짜
 -- curdate(), current_date
 select curdate(), current_date;
 
--- HH-MM-SS : 현재 시간 - 미국 기준
+-- HH-MM-SS : 현재 시간
 -- curtime(), current_time
 select curtime(), current_time();
 

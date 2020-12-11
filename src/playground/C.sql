@@ -87,7 +87,7 @@ select productcode, productname, productdescription from products;
 
 -- X
 -- 22. 주문번호와 주문상태, 주문수량*개별가격을 조회하세요
-select ordernumber, status,
+select orderNumber, state from orderdetai
 
 -- 23. 상품코드 S10_1678에 대한 주문번호와  상품이름, 딜러가msrp, 개별가격을 조회하세요
 

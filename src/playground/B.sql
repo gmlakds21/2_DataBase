@@ -258,12 +258,13 @@ select '2020-11-02', date_add( date_add('2020-11-02', interval 18 week) , interv
 
         ) day );
 
-
 -- 63) 오늘날짜를 "xx년 xx월 xx일" 형식으로 출력하세요
 select date_format(now(),'%Y년 %m월 %d일');
 
 -- 64) 지금 현재 '몇시 몇분' 인지 출력하세요.
 select date_format(now(), '%h시 %i분');
+select date_format(now(), '%H시 %i분');
+select date_format(now(), '%p %h시 %i분');
 
 -- 65) 이번 년도 12월 31일까지 몇일이 남았는지 출력하세요.
 select datediff('2020-12-31', now());
@@ -272,13 +273,19 @@ select datediff('2020-12-31', now());
 select first_name, date_format(hire_date,'%Y년 %m월') from employees;
 
 -- 67) 9월에 입사한 사원을 조회하세요
-select first_name, hire_date from employees where month(hire_date) = '09';
+select first_name, hire_date from employees where month(hire_date) = 9;
+select first_name, hire_date from employees where substr(hire_date,6,2) = '09';
+select first_name, hire_date from employees where date_format(hire_date,'%m') = '09';
 
 -- 68) 사원들의 입사일을 출력하되, 요일까지 함께 조회하세요
 select first_name, hire_date, dayname(hire_date) from employees;
+select first_name, hire_date, date_format(hire_date,'%W') from employees;
+select first_name, hire_date, date_format(hire_date,'%a') from employees;
+select first_name, hire_date, substr('일월화수목금토', dayofweek(hire_date),1) from employees;
+select first_name, hire_date, substr('일월화수목금토', date_format(hire_date,'%w')+1,1) from employees;
 
-    -- 69) 사원들의 급여를 통화 기호를 앞에 붙이고 천 단위마다 콤마를 붙여서 조회하세요
-
+-- 69) 사원들의 급여를 통화 기호를 앞에 붙이고 천 단위마다 콤마를 붙여서 조회하세요
+select first_name, concat('$',format(salary, 0)) from employees;
 
 -- 70) 사원들의 급여를 10자리로 출력하되 자릿수가 남는 경우 빈칸으로 채워서 조회하세요
 select first_name, lpad(salary,10,' ') from employees;
@@ -314,6 +321,3 @@ select * from empdeptloc where last_name = 'janette';
 select * from employees where last_name = 'janette';
 
 select first_name, round(coalesce(commission_pct, 0.0),2) from employees
-
-
-
