@@ -71,7 +71,7 @@ select dayofmonth(now()) '이번달 기준 몇일', dayofweek(now()) '이번주 
 
 -- 몇월 몇일인지
 -- 단위name(날짜)
-select monthname(now()) '몇월', dayname(now()) '요일'
+select monthname(now()) '몇월', dayname(now()) '요일';
 
 select substring('일월화수목금토',dayofweek(now()),1);
 select concat(substring('일월화수목금토',dayofweek(now()),1), '요일');

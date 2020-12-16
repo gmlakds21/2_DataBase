@@ -1,4 +1,4 @@
-package _2_Class_Java_DB._12_16_SungJukV10;
+package _2_Class_Java_DB.SungJuk._12_16_SungJukV10;
 // 매소드를 구현한 인터페이스 클래스
 interface _SungJuk_Interface {
 

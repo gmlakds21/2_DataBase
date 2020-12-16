@@ -1,4 +1,4 @@
-package _2_Class_Java_DB._12_16_SungJukV10;
+package _2_Class_Java_DB.SungJuk._12_16_SungJukV10;
 
 abstract class _SungJuk_GenericService implements _SungJuk_Interface {
 

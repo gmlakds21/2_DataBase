@@ -15,7 +15,6 @@ public class _12_15_9_JDBC_Orders3B {
 
         String sql = "select * from BookOrders where orderid = ?";
 
-
         Scanner sc = new Scanner(System.in);
         System.out.print("주문 번호를 입력해 주세요 : ");
         String order = sc.nextLine();

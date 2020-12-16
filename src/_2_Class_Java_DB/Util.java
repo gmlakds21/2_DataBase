@@ -32,6 +32,10 @@ public class Util {
                 USR = "playground7";
                 PWD = "playground2020";
                 break;
+            case "S" :
+                URL = "jdbc:mariadb://maria-db.coqecfviusin.ap-northeast-2.rds.amazonaws.com:3306/Sungjuk";
+                USR = "Sungjuk";
+                PWD = "Sungjuk2020";
         }
 
         Connection conn = null;

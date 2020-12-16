@@ -1,7 +1,8 @@
-package _2_Class_Java_DB._12_16_SungJukV10;
+package _2_Class_Java_DB.SungJuk._12_16_SungJukV10;
 
 class SungJuk_VO {
 
+   private int sjno;
    private String name;
    private int kor;
    private int eng;
@@ -9,6 +10,7 @@ class SungJuk_VO {
    private int sum;
    private double mean;
    private char grd;
+   private String regdate;
 
    public SungJuk_VO() {
    }
@@ -20,7 +22,17 @@ class SungJuk_VO {
       this.mat = mat;
    }
 
-   public SungJuk_VO(String name, int kor, int eng, int mat, int sum, double mean, char grd) {
+   public SungJuk_VO(int sjno, String name, int kor, int eng, int mat, String regdate) {
+      this.sjno = sjno;
+      this.name = name;
+      this.kor = kor;
+      this.eng = eng;
+      this.mat = mat;
+      this.regdate = regdate;
+   }
+
+   public SungJuk_VO(int sjno, String name, int kor, int eng, int mat, int sum, double mean, char grd, String regdate) {
+      this.sjno = sjno;
       this.name = name;
       this.kor = kor;
       this.eng = eng;
@@ -28,6 +40,7 @@ class SungJuk_VO {
       this.sum = sum;
       this.mean = mean;
       this.grd = grd;
+      this.regdate = regdate;
    }
 
    public String getName() {
@@ -84,5 +97,21 @@ class SungJuk_VO {
 
    public void setGrd(char grd) {
       this.grd = grd;
+   }
+
+   public int getSjno() {
+      return sjno;
+   }
+
+   public void setSjno(int sjno) {
+      this.sjno = sjno;
+   }
+
+   public String getRegdate() {
+      return regdate;
+   }
+
+   public void setRegdate(String regdate) {
+      this.regdate = regdate;
    }
 }
