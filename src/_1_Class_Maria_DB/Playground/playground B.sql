@@ -1,4 +1,4 @@
-_1_Class_Maria_DB.Create table regions (
+Create table regions (
                          region_id 	int,
                          region_name varchar(1000)
 );
@@ -7,7 +7,7 @@ alter table regions
 
 
 
-_1_Class_Maria_DB.Create table countries (
+Create table countries (
                            country_id   varchar(1000),
                            country_name varchar(1000),
                            region_id	 int
@@ -18,7 +18,7 @@ alter table countries
 
 
 
-_1_Class_Maria_DB.Create table locations (
+Create table locations (
                            location_id		int,
                            street_address  varchar(1000),
                            postal_code		varchar(1000),
@@ -32,7 +32,7 @@ alter table locations
 
 
 
-_1_Class_Maria_DB.Create table departments (
+Create table departments (
                              department_id	int,
                              department_name	varchar(1000),
                              manager_id		int,
@@ -44,7 +44,7 @@ alter table departments
 
 
 
-_1_Class_Maria_DB.Create table jobs (
+Create table jobs (
                       job_id		varchar(1000),
                       job_title	varchar(1000),
                       min_salary	int,
@@ -55,7 +55,7 @@ alter table jobs
 
 
 
-_1_Class_Maria_DB.Create table employees (
+Create table employees (
                            employee_id		int,
                            first_name		varchar(1000),
                            last_name		varchar(1000),
@@ -77,7 +77,7 @@ alter table employees
 
 
 
-_1_Class_Maria_DB.Create table job_history (
+Create table job_history (
                              employee_id		int,
                              start_date		datetime,
                              end_date		datetime,
@@ -96,7 +96,7 @@ alter table job_history
 
 
 
-_1_Class_Maria_DB.Create table warehouses (
+Create table warehouses (
                             warehouse_id	int,
                             warehouse_spec	varchar(1000),
                             warehouse_name	varchar(1000),
@@ -109,7 +109,7 @@ alter table warehouses
 
 
 
-_1_Class_Maria_DB.Create table product_information (
+Create table product_information (
                                      product_id			int,
                                      product_name		varchar(1000),
                                      product_description	varchar(1000),
@@ -127,7 +127,7 @@ alter table product_information
 
 
 
-_1_Class_Maria_DB.Create table inventories (
+Create table inventories (
                              product_id			int,
                              warehouse_id		int,
                              quantity_on_hand	varchar(1000)
@@ -139,7 +139,7 @@ alter table inventories
 
 
 
-_1_Class_Maria_DB.Create table product_descriptions(
+Create table product_descriptions(
                                      product_id				int,
                                      language_id				varchar(1000),
                                      translated_name			varchar(1000),
@@ -151,7 +151,7 @@ alter table product_descriptions
 
 
 
-_1_Class_Maria_DB.Create table customers (
+Create table customers (
                            customer_id		int,
                            cust_first_name	varchar(1000),
                            cust_last_name	varchar(1000),
@@ -168,13 +168,15 @@ _1_Class_Maria_DB.Create table customers (
                            gender			varchar(1000),
                            income_level	varchar(1000)
 );
+
 alter table customers
-    add constraint pk_cus 	  primary key (customer_id),
+    add constraint pk_cus 	  primary key (customer_id);
+alter table customers
     add constraint fk_cus_emp foreign key (account_mgr_id) references employees (employee_id);
 
 
 
-_1_Class_Maria_DB.Create table orders (
+Create table orders (
                         order_id		int,
                         order_date		datetime,
                         order_mode		varchar(1000),
@@ -193,7 +195,7 @@ alter table orders
 
 
 
-_1_Class_Maria_DB.Create table order_items (
+Create table order_items (
                              order_id	  int,
                              line_item_id  int,
                              product_id	  int,

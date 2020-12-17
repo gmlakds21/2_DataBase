@@ -92,4 +92,50 @@ public class Employee_DAO {
         }
         return employee;
     }
+
+    public static String updateEmp ( Employee_VO employee ) {
+        String result = "업데이트 실패";
+
+        Connection conn = null;
+        PreparedStatement pstmt = null;
+
+        conn = _Employee_JDBC.makeconn();
+        try {
+            pstmt = conn.prepareStatement(_Employee_JDBC.updateEmp);
+            pstmt.setString(1, employee.getFname());
+            pstmt.setString(2, employee.getLname());
+            pstmt.setString(3, employee.getEmail());
+            pstmt.setString(4, employee.getPhone());
+            pstmt.setInt(5, employee.getEmpno());
+            int cnt = pstmt.executeUpdate();
+            if ( cnt > 0 ) { result = "업데이트 성공"; }
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
+        _Employee_JDBC.desconn(conn, pstmt);
+
+        return result;
+    }
+
+    public static String deleteEmp( String target) {
+
+        String result = "삭제 실패";
+
+        Connection conn = null;
+        PreparedStatement pstmt = null;
+
+        conn = _Employee_JDBC.makeconn();
+        try {
+            pstmt = conn.prepareStatement(_Employee_JDBC.deleteEmp);
+            pstmt.setString(1, target);
+            int cnt = pstmt.executeUpdate();
+            if ( cnt > 0 ) { result = "삭제 성공"; }
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
+
+        _Employee_JDBC.desconn(conn, pstmt);
+
+        return result;
+    }
 }

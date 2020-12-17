@@ -67,7 +67,7 @@ class Employee_Service implements _Employee_interface {
    public void showAllInfo() {
 
       Scanner sc = new Scanner(System.in);
-      System.out.println("검색하시려는 EMPLOYEE_ID를 입력해 주세요 : ");
+      System.out.println("검색하시려는 employee_id를 입력해 주세요 : ");
       String target = sc.nextLine();
 
       Employee_VO employee = Employee_DAO.selectOneEmp( target );
@@ -82,68 +82,36 @@ class Employee_Service implements _Employee_interface {
 
    @Override
    public void modifyInfo() {
-/*
+
       Scanner sc = new Scanner(System.in);
-      System.out.println("수정하시려는 EMPLOYEE_ID를 입력해 주세요 : ");
-      int ID = sc.nextInt();
+      System.out.println("수정하시려는 employee_id를 입력해 주세요 : ");
+      Employee_VO employee = new Employee_VO();
 
-      Iterator<Employee_VO> iter = VOdata.iterator();
-      while (iter.hasNext()) {
-         person = iter.next();
-         if (person.getEmpno() == ID) {
+      employee.setEmpno( sc.nextInt() );
+      String blink = sc.nextLine();
 
-            String blink = sc.nextLine();
-            System.out.println("FIRST_NAME 를 입력해 주세요");
-            person.setFname(sc.nextLine());
-            System.out.println("LAST_NAME 를 입력해 주세요");
-            person.setLname(sc.nextLine());
-            System.out.println("EMAIL 를 입력해 주세요");
-            person.setEmail(sc.nextLine());
-            System.out.println("PHONE_NUMBER 를 입력해 주세요");
-            person.setPhone(sc.nextLine());
-            System.out.println("HIRE_DATE 를 입력해 주세요");
-            person.setHdata(sc.nextLine());
-            System.out.println("JOB_ID 를 입력해 주세요");
-            person.setJobid(sc.nextLine());
-            System.out.println("SALARY 를 입력해 주세요");
-            person.setSal(sc.nextInt());
-            System.out.println("COMMISSION_PCT 를 입력해 주세요");
-            person.setComm(sc.nextDouble());
-            System.out.println("MANAGER_ID 를 입력해 주세요");
-            person.setMgrid(sc.nextInt());
-            blink = sc.nextLine();
-            System.out.println("DEPARTMENT_ID 를 입력해 주세요");
-            person.setDeptid(sc.nextLine());
-            System.out.println();
+      System.out.println("first_name 를 입력해 주세요");
+      employee.setFname(sc.nextLine());
+      System.out.println("last_name 를 입력해 주세요");
+      employee.setLname(sc.nextLine());
+      System.out.println("email 를 입력해 주세요");
+      employee.setEmail(sc.nextLine());
+      System.out.println("phone_number 를 입력해 주세요");
+      employee.setPhone(sc.nextLine());
 
+      String result = Employee_DAO.updateEmp( employee );
 
-            String fmt = "EMPLOYEE_ID : %d, FIRST_NAME : %s, LAST_NAME : %s, EMAIL : %s, PHONE_NUMBER : %s, HIRE_DATE : %s, JOB_ID : %s, SALARY : %d, COMMISSION_PCT : %.2f, MANAGER_ID : %s, DEPARTMENT_ID : %s\n";
-            System.out.printf(fmt, person.getEmpno(), person.getFname(), person.getLname(), person.getEmail(), person.getPhone(), person.getHdata(), person.getJobid(), person.getSal(), person.getComm(), person.getMgrid(), person.getDeptid());
-            System.out.println("수정되었습니다.");
-         }
-      }
-
-*/
+      System.out.println(result);
    }
 
    @Override
    public void removeInfo() {
-/*
-      Scanner sc = new Scanner(System.in);
-      System.out.println("삭제하시려는 EMPLOYEE_ID를 입력해 주세요 : ");
-      int ID = sc.nextInt();
-      int i = 0;
-      int j = 0;
 
-      Iterator<Employee_VO> iter = VOdata.iterator();
-      while (iter.hasNext()) {
-         person = iter.next();
-         if (person.getEmpno() == ID) {
-            j = i;
-         }
-         i++;
-      }
-      VOdata.remove(j);
-*/
+      Scanner sc = new Scanner(System.in);
+      System.out.println("삭제하시려는 employee_id를 입력해 주세요 : ");
+      String target = sc.nextLine();
+
+      String result = Employee_DAO.deleteEmp( target );
+      System.out.println(result);
    }
 }

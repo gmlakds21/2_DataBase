@@ -96,4 +96,54 @@ class SungJuk_DAO {
         }
         return person;
     }
+
+    public static String updateSungJuk( SungJuk_VO person ) {
+
+        String result = "업데이트 실패";
+
+        Connection conn =  null;
+        PreparedStatement pstmt = null;
+
+        conn = _SungJuk_JDBC.makeconn();
+        try {
+            pstmt = conn.prepareStatement(_SungJuk_JDBC.updateSungjuk);
+            pstmt.setInt(1, person.getKor() );
+            pstmt.setInt(2, person.getEng() );
+            pstmt.setInt(3, person.getMat() );
+            pstmt.setInt(4, person.getSum() );
+            pstmt.setDouble(5, person.getMean() );
+            pstmt.setString(6, String.valueOf(person.getGrd()) );
+            pstmt.setInt(7, person.getSjno() );
+            int cnt = pstmt.executeUpdate();
+            if ( cnt > 0 ) { result = "업데이트 성공"; }
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
+
+        _SungJuk_JDBC.desconn(conn,pstmt);
+
+        return result;
+    }
+
+    public static String deleteSungJuk(String target) {
+
+        String result = "삭제 실패";
+
+        Connection conn = null;
+        PreparedStatement pstmt = null;
+
+        conn = _SungJuk_JDBC.makeconn();
+        try {
+            pstmt = conn.prepareStatement(_SungJuk_JDBC.deleteSungJuk);
+            pstmt.setString(1, target);
+            int cnt = pstmt.executeUpdate();
+            if ( cnt > 0) { result = "삭제 성공"; }
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
+
+        _SungJuk_JDBC.desconn(conn, pstmt);
+
+        return result;
+    }
 }

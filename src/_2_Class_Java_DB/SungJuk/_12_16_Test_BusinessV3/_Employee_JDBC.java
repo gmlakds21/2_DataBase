@@ -16,6 +16,12 @@ public class _Employee_JDBC {
             "select employee_id, first_name, last_name, email, phone_number, hire_date, job_id, salary, commission_pct, manager_id, department_id from employees " +
                  "where employee_id = ?";
 
+    public static String updateEmp =
+            "update employees set first_name = ?, last_name = ?, email = ?, phone_number = ? where employee_id = ?";
+
+    public static String deleteEmp =
+            "delete from employees where employee_id = ?";
+
     public static Connection makeconn( ) {
 
         String DRV = "org.mariadb.jdbc.Driver";

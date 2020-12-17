@@ -102,12 +102,38 @@ class SungJuk_Service extends _SungJuk_GenericService {
 
    @Override
    public void modifySungJuk () {
-      super.modifySungJuk();
+
+      Scanner sc = new Scanner (System.in);
+      SungJuk_VO person = new SungJuk_VO();
+
+      System.out.print("수정할 학생의 번호를 입력해 주세요 : ");
+      person.setSjno( sc.nextInt() );
+
+      System.out.print("국어 점수를 입력해 주세요 : ");
+      person.setKor( sc.nextInt() );
+      System.out.print("영어 점수를 입력해 주세요 : ");
+      person.setEng( sc.nextInt() );
+      System.out.print("수학 점수를 입력해 주세요 : ");
+      person.setMat( sc.nextInt() );
+
+      computeSungJuk(person);
+
+      String result = SungJuk_DAO.updateSungJuk( person );
+      System.out.println(result);
    }
 
    @Override
    public void removeSungJuk () {
-      super.removeSungJuk();
+
+      Scanner sc = new Scanner (System.in);
+
+      System.out.print("삭제할 성적 번호를 입력해 주세요 : ");
+      String target = sc.nextLine();
+
+      String result = SungJuk_DAO.deleteSungJuk(target);
+      System.out.println(result);
+
+
    }
 
 }

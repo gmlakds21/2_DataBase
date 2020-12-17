@@ -1,30 +1,23 @@
-package _2_Class_Java_DB.SungJuk._12_16_SungJukV10;
+package _2_Class_Java_DB.SungJuk._12_17_Test_SamKwangFinal;
 
 import java.sql.*;
 
-public class _SungJuk_JDBC {
+public class _Samkwang_JDBC {
 
-    public static String insertSungjuk =
-            "insert into Sungjuk (name, kor, eng, mat, tot, mean, grd) values (?,?,?,?,?,?,?)" ;
+    public static String insertEmp =
+            "insert into employees (first_name, last_name, email, phone_number, hire_date) " +
+                    "values (?,?,?,?,?)";
 
-    public static String selectSungjuk =
-            "select sjno,name,kor,eng,mat,regdate from Sungjuk order by sjno";
-
-    public static String selectOneSungjuk =
-            "select * from Sungjuk where sjno = ?";
-
-    public static String updateSungjuk =
-            "update Sungjuk set kor = ?, eng = ?, mat = ?, tot = ?, mean = ?, grd = ? where sjno = ? regdate = sysdate()";
-
-    public static String deleteSungJuk =
-            "delete from Sungjuk where sjno = ?";
+    public static String selectEmp =
+            "select employee_id, first_name, last_name, email, phone_number, hire_date from employees " +
+                    "order by employee_id";
 
     public static Connection makeconn( ) {
 
         String DRV = "org.mariadb.jdbc.Driver";
-        String URL = "jdbc:mariadb://maria-db.coqecfviusin.ap-northeast-2.rds.amazonaws.com:3306/Sungjuk";
-        String USR = "Sungjuk";
-        String PWD = "Sungjuk2020";
+        String URL = "jdbc:mariadb://maria-db.coqecfviusin.ap-northeast-2.rds.amazonaws.com:3306/playground8";
+        String USR = "playground8";
+        String PWD = "playground2020";
 
         Connection conn = null;
         try {
