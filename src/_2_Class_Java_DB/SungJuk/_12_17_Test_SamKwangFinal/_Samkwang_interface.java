@@ -4,6 +4,8 @@ interface _Samkwang_interface {
 
     void displayMenu();
     void readCODP();
+    void readOneCODP();
     void readSOE();
+    void readOneSOE();
 
 }

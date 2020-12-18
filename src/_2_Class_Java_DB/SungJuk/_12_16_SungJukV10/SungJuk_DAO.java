@@ -9,7 +9,7 @@ import java.util.ArrayList;
 class SungJuk_DAO {
 
     // 넘겨받은 성적데이터를 Sungjuk 테이블에 저장
-    public static String insertSungJuk(SungJuk_VO person) {
+    static String insertSungJuk(SungJuk_VO person) {
 
         Connection conn = null;
         PreparedStatement pstmt = null;
@@ -36,7 +36,7 @@ class SungJuk_DAO {
 
     // 번호, 이름, 국어, 영어, 수학, 등올일을 조회하고
     // 그 결과들을 ArrayList에 담아서 넘김
-    public static ArrayList<SungJuk_VO> selectSungjuk() {
+    static ArrayList<SungJuk_VO> selectSungjuk() {
 
         ArrayList<SungJuk_VO> persons = new ArrayList<>();
 
@@ -68,7 +68,7 @@ class SungJuk_DAO {
 
     // 학생 번호로 조회하고
     // 그 결과를 SungJuk_VO 에 담아서 넘김
-    public static SungJuk_VO selecetOneSungJuk( String target ) {
+    static SungJuk_VO selecetOneSungJuk( String target ) {
         SungJuk_VO person = null;
 
         Connection conn = null;
@@ -97,7 +97,7 @@ class SungJuk_DAO {
         return person;
     }
 
-    public static String updateSungJuk( SungJuk_VO person ) {
+    static String updateSungJuk( SungJuk_VO person ) {
 
         String result = "업데이트 실패";
 
@@ -125,7 +125,7 @@ class SungJuk_DAO {
         return result;
     }
 
-    public static String deleteSungJuk(String target) {
+    static String deleteSungJuk(String target) {
 
         String result = "삭제 실패";
 

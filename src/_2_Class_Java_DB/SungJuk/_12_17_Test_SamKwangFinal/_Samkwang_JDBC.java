@@ -4,13 +4,19 @@ import java.sql.*;
 
 public class _Samkwang_JDBC {
 
-    public static String insertEmp =
-            "insert into employees (first_name, last_name, email, phone_number, hire_date) " +
-                    "values (?,?,?,?,?)";
+    public static String selectCODP =
+            "select 고객번호, 고객이름, 주문번호, 주문일, 제품번호, 수량, 제품이름, 단가 from CODP " +
+                    "order by 주문번호 desc";
 
-    public static String selectEmp =
-            "select employee_id, first_name, last_name, email, phone_number, hire_date from employees " +
-                    "order by employee_id";
+    public static String selectOneCODP =
+            "select * from CODP where 주문번호 = ? order by 주문번호 desc";
+
+    public static String selectSOE =
+            "select 인사번호, 주문번호, 운송ID, 운송이름, 주문일, 직책 "+
+            "from SOE order by 운송ID desc";
+
+    public static String selectOneSOE =
+            "select * from SOE where 운송ID = ?";
 
     public static Connection makeconn( ) {
 

@@ -6,7 +6,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
-public class Employee_DAO {
+class Employee_DAO {
 
     public static String insertEmp( Employee_VO employee) {
 

@@ -1,0 +1,10 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="Samkwang:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/Samkwang_jar</output-path>
+    <root id="archive" name="DataBase.jar">
+      <element id="module-output" name="DataBase" />
+      <element id="extracted-dir" path="C:/JAVA/mariadb-java-client-2.7.1.jar" path-in-jar="/" />
+      <element id="library" level="project" name="mariadb-java-client-2.7.1" />
+    </root>
+  </artifact>
+</component>

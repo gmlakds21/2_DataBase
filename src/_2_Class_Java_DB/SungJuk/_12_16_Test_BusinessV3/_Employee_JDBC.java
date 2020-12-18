@@ -2,7 +2,7 @@ package _2_Class_Java_DB.SungJuk._12_16_Test_BusinessV3;
 
 import java.sql.*;
 
-public class _Employee_JDBC {
+class _Employee_JDBC {
 
     public static String insertEmp =
             "insert into employees (first_name, last_name, email, phone_number, hire_date) " +
