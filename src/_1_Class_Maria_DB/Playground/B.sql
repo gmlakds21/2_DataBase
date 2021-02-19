@@ -311,7 +311,7 @@ select last_day(hire_date) from employees;
 
 
 -- //
-_1_Class_Maria_DB.Create view empdeptloc2 as
+Create view empdeptloc2 as
     select * from employees e
         inner join departments d using(department_id, manager_id)
         inner join locations l using(location_id);

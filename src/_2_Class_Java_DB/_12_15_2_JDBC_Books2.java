@@ -51,6 +51,7 @@ public class _12_15_2_JDBC_Books2 {
 
         return conn;
     }
+
     public static void destroyconn (PreparedStatement pstmt, Connection conn) {
         try {
             if (pstmt != null) { pstmt.close(); }
@@ -92,12 +93,6 @@ public class _12_15_2_JDBC_Books2 {
         } catch (SQLException throwables) {
             throwables.printStackTrace();
         }
-
-
-
         destroyconn(pstmt,conn);
-
-
     }
 }
-// Prepared Statement 로 하는 이유 물어보자

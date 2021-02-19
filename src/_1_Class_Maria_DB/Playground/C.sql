@@ -85,7 +85,6 @@ select customernumber, count(ordernumber) from orders group by customernumber;
 -- 21. 상품코드, 상품이름, 상품설명을 조회하세요
 select productcode, productname, productdescription from products;
 
--- X
 -- 22. 주문번호와 주문상태, 주문수량*개별가격을 조회하세요
 select orderNumber, state from orderdetai
 

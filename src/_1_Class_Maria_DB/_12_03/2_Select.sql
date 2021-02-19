@@ -1,6 +1,6 @@
 -- 데이터 조회 : select
 
-_1_Class_Maria_DB.Create table members (
+Create table members (
     user_id varchar(10),
     user_pw varchar(10),
     name	varchar(10),

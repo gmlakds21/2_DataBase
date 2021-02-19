@@ -2,7 +2,7 @@
 -- 데이터 입력시 빈칸으로 입력하지 못하게 해주는 키워드
 -- 컬럼명 컬럼유형 not null
 
-_1_Class_Maria_DB.Create table employees (
+Create table employees (
     employee_id 	int,
     first_name  	varchar(25) NOT null, -- <- 초기단계에 NOT NULL 설정하는 방법
     last_name 		varchar(25) NOT null,
@@ -14,7 +14,7 @@ describe employees;
 -- 데이터 입력 누락시 자동으로 값을 설정해주는 키워드
 -- 컬럼명 컬럼유형 default 기본값
 
-_1_Class_Maria_DB.Create table members (
+Create table members (
     user_id varchar(10),
     user_pw varchar(10),
     grade	varchar(10) default 'bronze',

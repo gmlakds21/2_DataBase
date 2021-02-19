@@ -1,5 +1,5 @@
 -- 고객 테이블
-_1_Class_Maria_DB.Create table customers (
+Create table customers (
     custID	varchar(10) primary key,
     name	varchar(10),
     age		int,
@@ -8,7 +8,7 @@ _1_Class_Maria_DB.Create table customers (
     points	int
 );
 -- 제품 테이블
-_1_Class_Maria_DB.Create table products (
+Create table products (
     prdno	 char(4) primary key,
     prdname  varchar(10),
     stock	 int,
@@ -16,7 +16,7 @@ _1_Class_Maria_DB.Create table products (
     maker	 varchar(10)
 );
 -- 주문 테이블
-_1_Class_Maria_DB.Create table orders (
+Create table orders (
     ordno	char(4) primary key,
     custID	varchar(10), -- 고객 테이블 pk ( primary key )
     prdno	char(4),	 -- 제품 테이블 pk
@@ -32,7 +32,7 @@ _1_Class_Maria_DB.Create table orders (
 -- 주문 + 상품 테이블 간 관계 설정
 
 -- 주문 테이블
-_1_Class_Maria_DB.Create table orders2_1 ( -- 주문 / 고객 외래키 설정
+Create table orders2_1 ( -- 주문 / 고객 외래키 설정
     ordno	char(4) primary key,
     custID	varchar(10), -- 고객 테이블 pk ( primary key )
     prdno	char(4),	 -- 제품 테이블 pk
@@ -43,7 +43,7 @@ _1_Class_Maria_DB.Create table orders2_1 ( -- 주문 / 고객 외래키 설정
     references customers (custID)
 );
 
-_1_Class_Maria_DB.Create table orders2_2 ( -- 주문 / 제품 외래키 설정
+Create table orders2_2 ( -- 주문 / 제품 외래키 설정
     ordno	char(4) primary key,
     custID	varchar(10), -- 고객 테이블 pk ( primary key )
     prdno	char(4),	 -- 제품 테이블 pk
@@ -54,7 +54,7 @@ _1_Class_Maria_DB.Create table orders2_2 ( -- 주문 / 제품 외래키 설정
     references products (prdno)
 );
 
-_1_Class_Maria_DB.Create table orders3 ( -- 주문 / 고객, 제품 외래키 설정
+Create table orders3 ( -- 주문 / 고객, 제품 외래키 설정
     ordno	char(4) primary key,
     custID	varchar(10), -- 고객 테이블 pk ( primary key )
     prdno	char(4),	 -- 제품 테이블 pk

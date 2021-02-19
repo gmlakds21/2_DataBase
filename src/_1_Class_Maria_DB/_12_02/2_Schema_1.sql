@@ -1,5 +1,5 @@
 -- 제약 조건 추가하기
-_1_Class_Maria_DB.Create table employees (
+Create table employees (
     employee_id 	int,
     first_name  	varchar(25),
     last_name 		varchar(25),
@@ -7,7 +7,7 @@ _1_Class_Maria_DB.Create table employees (
 );
 describe employees;
 
-_1_Class_Maria_DB.Create table departments (
+Create table departments (
     department_id 	int,
     department_name	varchar(30),
     manager_id		int

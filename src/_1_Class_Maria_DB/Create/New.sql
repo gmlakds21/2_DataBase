@@ -1,14 +1,14 @@
-Create database playground8;
+Create database TeamProject;
 
-Create user 'playground8'@'%'
-    identified by 'playground2020';
+Create user 'TeamProject'@'%'
+    identified by 'TeamProject2020';
 
 GRANT SELECT, INSERT, UPDATE,
     DELETE, CREATE, DROP, REFERENCES, INDEX,
     ALTER, CREATE TEMPORARY TABLES,
     LOCK TABLES, EXECUTE, CREATE VIEW, SHOW VIEW,
     CREATE ROUTINE, ALTER ROUTINE, TRIGGER
-    ON playground8.* TO 'playground8'@'%'
+    ON TeamProject.* TO 'TeamProject'@'%'
     WITH GRANT OPTION;
 
 flush privileges;

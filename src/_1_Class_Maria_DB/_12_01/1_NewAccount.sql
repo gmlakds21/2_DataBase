@@ -1,6 +1,6 @@
-_1_Class_Maria_DB.Create database bigdata;	-- database 이름
+Create database bigdata;	-- database 이름
 
-_1_Class_Maria_DB.Create user 'bigdata'@'%'	-- 계정 이름
+Create user 'bigdata'@'%'	-- 계정 이름
     identified by 'bigdata2020';	-- 계정 비밀번호
 
 GRANT SELECT, INSERT, UPDATE,

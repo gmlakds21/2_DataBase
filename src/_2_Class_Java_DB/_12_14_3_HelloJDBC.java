@@ -106,9 +106,5 @@ public class _12_14_3_HelloJDBC {
             } catch (SQLException sqlex) {
                 System.out.println("DB 접속 주소가 틀리거나, 아이디 비밀번호를 확인하세요");
             }
-
-        // 3.
-
-
     }
 }

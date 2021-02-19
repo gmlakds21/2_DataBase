@@ -1,6 +1,6 @@
 Create table regions (
-                         region_id 	int,
-                         region_name varchar(1000)
+    region_id 	int,
+    region_name varchar(1000)
 );
 alter table regions
     add constraint pk_reg primary key (region_id);
@@ -8,9 +8,9 @@ alter table regions
 
 
 Create table countries (
-                           country_id   varchar(1000),
-                           country_name varchar(1000),
-                           region_id	 int
+    country_id   varchar(1000),
+    country_name varchar(1000),
+    region_id	 int
 );
 alter table countries
     add constraint pk_cou		primary key (country_id),
@@ -19,12 +19,12 @@ alter table countries
 
 
 Create table locations (
-                           location_id		int,
-                           street_address  varchar(1000),
-                           postal_code		varchar(1000),
-                           city			varchar(1000),
-                           state_province	varchar(1000),
-                           country_id		varchar(1000)
+    location_id		int,
+    street_address  varchar(1000),
+    postal_code		varchar(1000),
+    city			varchar(1000),
+    state_province	varchar(1000),
+    country_id		varchar(1000)
 );
 alter table locations
     add constraint pk_loc	  primary key (location_id),
@@ -33,10 +33,10 @@ alter table locations
 
 
 Create table departments (
-                             department_id	int,
-                             department_name	varchar(1000),
-                             manager_id		int,
-                             location_id		int
+    department_id	int,
+    department_name	varchar(1000),
+    manager_id		int,
+    location_id		int
 );
 alter table departments
     add constraint pk_dep	  primary key (department_id),
@@ -45,10 +45,10 @@ alter table departments
 
 
 Create table jobs (
-                      job_id		varchar(1000),
-                      job_title	varchar(1000),
-                      min_salary	int,
-                      max_salary	int
+    job_id		varchar(1000),
+    job_title	varchar(1000),
+    min_salary	int,
+    max_salary	int
 );
 alter table jobs
     add constraint pk_job	primary key (job_id);
@@ -56,17 +56,17 @@ alter table jobs
 
 
 Create table employees (
-                           employee_id		int,
-                           first_name		varchar(1000),
-                           last_name		varchar(1000),
-                           email			varchar(1000),
-                           phone_number 	varchar(1000),
-                           hire_date		datetime,
-                           job_id			varchar(1000),
-                           salary			int,
-                           commission_pct	decimal(20,10),
-                           manager_id		int,
-                           department_id	int
+    employee_id		int,
+    first_name		varchar(1000),
+    last_name		varchar(1000),
+    email			varchar(1000),
+    phone_number 	varchar(1000),
+    hire_date		datetime,
+    job_id			varchar(1000),
+    salary			int,
+    commission_pct	decimal(20,10),
+    manager_id		int,
+    department_id	int
 );
 alter table employees
     add constraint pk_emp	  primary key (employee_id),
@@ -78,11 +78,11 @@ alter table employees
 
 
 Create table job_history (
-                             employee_id		int,
-                             start_date		datetime,
-                             end_date		datetime,
-                             job_id			varchar(1000),
-                             department_id	int
+    employee_id		int,
+    start_date		datetime,
+    end_date		datetime,
+    job_id			varchar(1000),
+    department_id	int
 );
 alter table job_history
     add constraint pk_job 	  primary key (employee_id, start_date),
@@ -97,11 +97,11 @@ alter table job_history
 
 
 Create table warehouses (
-                            warehouse_id	int,
-                            warehouse_spec	varchar(1000),
-                            warehouse_name	varchar(1000),
-                            location_id		int,
-                            wh_geo_location	varchar(1000)
+    warehouse_id	int,
+    warehouse_spec	varchar(1000),
+    warehouse_name	varchar(1000),
+    location_id		int,
+    wh_geo_location	varchar(1000)
 );
 alter table warehouses
     add constraint pk_war 	  primary key (warehouse_id),
@@ -110,17 +110,17 @@ alter table warehouses
 
 
 Create table product_information (
-                                     product_id			int,
-                                     product_name		varchar(1000),
-                                     product_description	varchar(1000),
-                                     category_id			int,
-                                     weight_class		int,
-                                     warranty_period		varchar(1000),
-                                     supplier_id			int,
-                                     product_status		varchar(1000),
-                                     list_price			int,
-                                     min_price			int,
-                                     catalog_url			varchar(1000)
+    product_id			int,
+    product_name		varchar(1000),
+    product_description	varchar(1000),
+    category_id			int,
+    weight_class		int,
+    warranty_period		varchar(1000),
+    supplier_id			int,
+    product_status		varchar(1000),
+    list_price			int,
+    min_price			int,
+    catalog_url			varchar(1000)
 );
 alter table product_information
     add constraint pk_pro	primary key (product_id);
@@ -128,9 +128,9 @@ alter table product_information
 
 
 Create table inventories (
-                             product_id			int,
-                             warehouse_id		int,
-                             quantity_on_hand	varchar(1000)
+    product_id			int,
+    warehouse_id		int,
+    quantity_on_hand	varchar(1000)
 );
 alter table inventories
     add constraint pk_pro	  primary key (product_id),
@@ -140,10 +140,10 @@ alter table inventories
 
 
 Create table product_descriptions(
-                                     product_id				int,
-                                     language_id				varchar(1000),
-                                     translated_name			varchar(1000),
-                                     translated_description  varchar(1000)
+    product_id				int,
+    language_id				varchar(1000),
+    translated_name			varchar(1000),
+    translated_description  varchar(1000)
 );
 alter table product_descriptions
     add constraint pk_pro	  primary key (product_id, language_id),
@@ -152,21 +152,21 @@ alter table product_descriptions
 
 
 Create table customers (
-                           customer_id		int,
-                           cust_first_name	varchar(1000),
-                           cust_last_name	varchar(1000),
-                           cust_address	varchar(1000),
-                           phone_numbers	varchar(1000),
-                           nls_language	varchar(1000),
-                           nls_territory	varchar(1000),
-                           credit_limit	int,
-                           cust_email		varchar(1000),
-                           account_mgr_id	int,
-                           cust_geo_location	varchar(1000),
-                           date_of_birth	datetime,
-                           marital_status	varchar(1000),
-                           gender			varchar(1000),
-                           income_level	varchar(1000)
+    customer_id		int,
+    cust_first_name	varchar(1000),
+    cust_last_name	varchar(1000),
+    cust_address	varchar(1000),
+    phone_numbers	varchar(1000),
+    nls_language	varchar(1000),
+    nls_territory	varchar(1000),
+    credit_limit	int,
+    cust_email		varchar(1000),
+    account_mgr_id	int,
+    cust_geo_location	varchar(1000),
+    date_of_birth	datetime,
+    marital_status	varchar(1000),
+    gender			varchar(1000),
+    income_level	varchar(1000)
 );
 
 alter table customers
@@ -177,14 +177,14 @@ alter table customers
 
 
 Create table orders (
-                        order_id		int,
-                        order_date		datetime,
-                        order_mode		varchar(1000),
-                        customer_id		int,
-                        order_status	int,
-                        order_total		decimal(20,10),
-                        sales_rep_id	int,
-                        promotion_id	varchar(1000)
+    order_id		int,
+    order_date		datetime,
+    order_mode		varchar(1000),
+    customer_id		int,
+    order_status	int,
+    order_total		decimal(20,10),
+    sales_rep_id	int,
+    promotion_id	varchar(1000)
 );
 alter table orders
     add constraint pk_ord	  primary key (order_id);
@@ -196,11 +196,11 @@ alter table orders
 
 
 Create table order_items (
-                             order_id	  int,
-                             line_item_id  int,
-                             product_id	  int,
-                             unit_price	  decimal(20,10),
-                             quantity	  int
+    order_id	  int,
+    line_item_id  int,
+    product_id	  int,
+    unit_price	  decimal(20,10),
+    quantity	  int
 );
 alter table order_items
     add constraint pk_ord 	  primary key (order_id),

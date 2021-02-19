@@ -1,10 +1,10 @@
-_1_Class_Maria_DB.Create table users (
-                       user_id	varchar(10) primary key,
-                       name 	char(6),
-                       age 	int,
-                       grade	varchar(10) default 'bronze',
-                       job		varchar(20),
-                       mileage int
+Create table users (
+    user_id	varchar(10) primary key,
+    name 	char(6),
+    age 	int,
+    grade	varchar(10) default 'bronze',
+    job		varchar(20),
+    mileage int
 );
 
 insert into users values
@@ -16,12 +16,12 @@ insert into users values
 ('peach', 	'오형준',NULL, 	'silver', 	'의사', 		300),
 ('pear', 	'채광주', 31, 	'silver', 	'회사원', 	500);
 
-_1_Class_Maria_DB.Create table product (
-                         pro_no	varchar(3)		primary key,
-                         pro_name varchar(20),
-                         stock	int,
-                         price	int,
-                         brand	varchar(10)
+Create table product (
+    pro_no	varchar(3)		primary key,
+    pro_name varchar(20),
+    stock	int,
+    price	int,
+    brand	varchar(10)
 );
 
 insert into product values
@@ -33,15 +33,15 @@ insert into product values
 ('p06', '통통우동',   1000, 1550, '민국푸드'),
 ('p07', '달콤비스킷', 1650, 1500, '한빛제과');
 
-_1_Class_Maria_DB.Create table order_table (
-                             ord_no		varchar(3)	primary key,
-                             user_id		varchar(10),
-                             pro_no		varchar(3),
-                             amount		int,
-                             address 	varchar(20),
-                             order_time	date,
-                             foreign key (user_id) references users (user_id),
-                             foreign key (pro_no)  references product (pro_no)
+Create table order_table (
+    ord_no		varchar(3)	primary key,
+    user_id		varchar(10),
+    pro_no		varchar(3),
+    amount		int,
+    address 	varchar(20),
+    order_time	date,
+    foreign key (user_id) references users (user_id),
+    foreign key (pro_no)  references product (pro_no)
 );
 
 insert into order_table values
@@ -58,11 +58,11 @@ insert into order_table values
 
 
 
-_1_Class_Maria_DB.Create table Books (
-                       bookid		int			primary key,
-                       bookname	varchar(50),
-                       publisher	varchar(20),
-                       price		int
+Create table Books (
+    bookid		int			primary key,
+    bookname	varchar(50),
+    publisher	varchar(20),
+    price		int
 );
 
 insert into Books values
@@ -77,11 +77,11 @@ insert into Books values
 (9,  '올림픽 이야기', 	  '삼성당',		7500),
 (10, 'Olympic Champions', 'Pearson', 	13000);
 
-_1_Class_Maria_DB.Create table BookMembers (
-                             custid	int			primary key,
-                             name	char(6),
-                             address	varchar(50),
-                             phone	varchar(15)
+Create table BookMembers (
+    custid	int			primary key,
+    name	char(6),
+    address	varchar(50),
+    phone	varchar(15)
 );
 
 insert into BookMembers values
@@ -91,16 +91,16 @@ insert into BookMembers values
 (4, '추신수', '미국 클리블랜드', 	'000-8000-0001'),
 (5, '박세리', '대한민국 대전',		NULL);
 
-_1_Class_Maria_DB.Create table BookOrders (
-                            orderid		int 	primary key,
-                            custid		int,
-                            bookid		int,
-                            saleprice	int,
-                            orderdate	date,
-                            foreign key	(bookid)
-                                references Books (bookid),
-                            foreign key (custid)
-                                references BookMembers (custid)
+Create table BookOrders (
+    orderid		int 	primary key,
+    custid		int,
+    bookid		int,
+    saleprice	int,
+    orderdate	date,
+    foreign key	(bookid)
+        references Books (bookid),
+    foreign key (custid)
+        references BookMembers (custid)
 );
 
 insert into BookOrders values
@@ -114,6 +114,3 @@ insert into BookOrders values
 ( 8,3,10, 12000, '2014-07-08'),
 ( 9,2,10,  7000, '2014-07-09'),
 (10,3,8,  13000, '2014-07-10');
-
-
-
