@@ -15,27 +15,27 @@ public class Util {
             case "A" :
                 URL = "jdbc:mariadb://maria-db.coqecfviusin.ap-northeast-2.rds.amazonaws.com:3306/playground5";
                 USR = "playground5";
-                PWD = "playground2020";
+                PWD = "tmdgml201";
                 break;
             case "B" :
                 URL = "jdbc:mariadb://maria-db.coqecfviusin.ap-northeast-2.rds.amazonaws.com:3306/playground4_2";
                 USR = "playground4_2";
-                PWD = "playground2020";
+                PWD = "tmdgml201";
                 break;
             case "C" :
                 URL = "jdbc:mariadb://maria-db.coqecfviusin.ap-northeast-2.rds.amazonaws.com:3306/playground6";
                 USR = "playground6";
-                PWD = "playground2020";
+                PWD = "tmdgml201";
                 break;
             case "D" :
                 URL = "jdbc:mariadb://maria-db.coqecfviusin.ap-northeast-2.rds.amazonaws.com:3306/playground7";
                 USR = "playground7";
-                PWD = "playground2020";
+                PWD = "tmdgml201";
                 break;
             case "S" :
                 URL = "jdbc:mariadb://maria-db.coqecfviusin.ap-northeast-2.rds.amazonaws.com:3306/Sungjuk";
                 USR = "Sungjuk";
-                PWD = "Sungjuk2020";
+                PWD = "tmdgml201";
         }
 
         Connection conn = null;

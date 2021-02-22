@@ -22,10 +22,6 @@ public class Samkwang_VO_CODP {
     private int 단가;
     private int 재고량;
 
-
-
-
-
     public Samkwang_VO_CODP() {
     }
 

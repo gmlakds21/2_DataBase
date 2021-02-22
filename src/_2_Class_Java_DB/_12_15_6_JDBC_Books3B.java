@@ -36,7 +36,7 @@ public class _12_15_6_JDBC_Books3B {
 
                 String result = String.format(fmt,bookid, bookname, publisher, price);
                 sb.append(result);
-        }
+            }
         } catch (SQLException throwables) {
             throwables.printStackTrace();
         }

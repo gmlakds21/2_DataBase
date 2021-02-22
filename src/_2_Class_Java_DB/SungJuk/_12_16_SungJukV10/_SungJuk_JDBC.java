@@ -24,7 +24,7 @@ class _SungJuk_JDBC {
         String DRV = "org.mariadb.jdbc.Driver";
         String URL = "jdbc:mariadb://maria-db.coqecfviusin.ap-northeast-2.rds.amazonaws.com:3306/Sungjuk";
         String USR = "Sungjuk";
-        String PWD = "Sungjuk2020";
+        String PWD = "tmdgml201";
 
         Connection conn = null;
         try {

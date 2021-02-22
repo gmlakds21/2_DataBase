@@ -23,7 +23,7 @@ public class _Samkwang_JDBC {
         String DRV = "org.mariadb.jdbc.Driver";
         String URL = "jdbc:mariadb://maria-db.coqecfviusin.ap-northeast-2.rds.amazonaws.com:3306/playground8";
         String USR = "playground8";
-        String PWD = "playground2020";
+        String PWD = "tmdgml201";
 
         Connection conn = null;
         try {
